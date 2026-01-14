@@ -1,0 +1,208 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nomeCompleto": "Rafaela Rodrigues dos Anjos",
+      "email": "rafaela@email.com",
+      "senha": "123456",
+      "tarefas": [
+        {
+          "id": "1",
+          "titulo": "Comprar Leite",
+          "descricao": "Comprar 2 litros de leite",
+          "data": "06-01-2026",
+          "horario": "08:30",
+          "status": "Pendente"
+        },
+        {
+          "id": "2",
+          "titulo": "Pagar contas",
+          "descricao": "Pagar aluguel e conta da luz",
+          "data": "06-01-2026",
+          "horario": "08:30",
+          "status": "Pendente"
+        },
+        {
+          "id": "1767882277339",
+          "titulo": "VAI DAR CERTO",
+          "descricao": "VAI DAR CERTO",
+          "data": "2026-01-08",
+          "horario": "08:30",
+          "status": "Pendente"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "nomeCompleto": "João Vitor Nunes do Amaral",
+      "email": "joao@email.com",
+      "senha": "abcdef",
+      "tarefas": [
+        {
+          "id": "3",
+          "titulo": "Estudar Programação",
+          "descricao": "Estudar JavaScript",
+          "data": "06-01-2026",
+          "horario": "08:30",
+          "status": "Pendente"
+        }
+      ]
+    },
+    {
+      "id": "1ab3",
+      "nomeCompleto": "Rafaela Rodrigues",
+      "email": "rafaelardosanjos@gmail.com",
+      "senha": "12345",
+      "tarefas": [
+        {
+          "id": "1767883005773",
+          "titulo": "Comprar leite",
+          "descricao": "v",
+          "data": "2026-01-08",
+          "horario": "08:30",
+          "status": "Concluída"
+        },
+        {
+          "id": "1767884646976",
+          "titulo": "Pagar contas",
+          "descricao": "v",
+          "data": "2026-01-08",
+          "horario": "08:30",
+          "status": "Pendente"
+        },
+        {
+          "id": "1767884662765",
+          "titulo": "Comprar cocacola",
+          "descricao": "v",
+          "data": "2026-01-08",
+          "horario": "08:30",
+          "status": "Pendente"
+        }
+      ]
+    },
+    {
+      "id": "277c",
+      "nomeCompleto": "Isadora Ramos",
+      "email": "isadora@gmail.com",
+      "senha": "123456",
+      "tarefas": []
+    },
+    {
+      "id": "5ebc",
+      "nomeCompleto": "Ilia Lala",
+      "email": "iliala@gmail.com",
+      "senha": "123456",
+      "tarefas": [
+        {
+          "id": "1767970599878",
+          "titulo": "Comprar leite",
+          "descricao": "v",
+          "data": "2026-01-09",
+          "horario": "08:30",
+          "status": "Concluída"
+        },
+        {
+          "id": "1767971176538",
+          "titulo": "Comprar cocacola",
+          "descricao": "v",
+          "data": "2026-01-09",
+          "horario": "08:30",
+          "status": "Pendente"
+        },
+        {
+          "id": "1767971306493",
+          "titulo": "Teste",
+          "descricao": "v",
+          "data": "2026-01-09",
+          "horario": "08:30",
+          "status": "Pendente"
+        },
+        {
+          "id": "1767971478348",
+          "titulo": "Comprar leite",
+          "descricao": "v",
+          "data": "2026-01-09",
+          "horario": "08:30",
+          "status": "Pendente"
+        },
+        {
+          "id": "1767971497391",
+          "titulo": "Teste",
+          "descricao": "v",
+          "data": "2026-01-02",
+          "horario": "08:30",
+          "status": "Concluída"
+        },
+        {
+          "id": "1768050096846",
+          "titulo": "Comprar leite",
+          "descricao": "v",
+          "data": "2026-01-09",
+          "horario": "08:30",
+          "status": "Pendente"
+        },
+        {
+          "id": "1768246637620",
+          "titulo": "Comprar leite",
+          "descricao": "v",
+          "data": "2026-01-13",
+          "horario": "08:30",
+          "status": "Concluída"
+        },
+        {
+          "id": "1768323394773",
+          "titulo": "Comprar leite 22",
+          "descricao": "v",
+          "data": "2026-01-13",
+          "horario": "08:30",
+          "status": "Concluída"
+        }
+      ]
+    },
+    {
+      "id": "29c1",
+      "nomeCompleto": "Amora",
+      "email": "amora@gmail.com",
+      "senha": "309",
+      "tarefas": []
+    },
+    {
+      "id": "c17a",
+      "nomeCompleto": "Amora",
+      "email": "amora123@gmail.com",
+      "senha": "Badumimi21!",
+      "tarefas": []
+    },
+    {
+      "id": "84cb",
+      "nomeCompleto": "Amorinha",
+      "email": "amora12@gmail.com",
+      "senha": "940",
+      "tarefas": []
+    },
+    {
+      "id": "2373",
+      "nomeCompleto": "Amora",
+      "email": "amora1@gmail.com",
+      "senha": "940",
+      "tarefas": [
+        {
+          "id": "1768331538536",
+          "titulo": "Teste",
+          "descricao": "v",
+          "data": "2026-01-02",
+          "horario": "08:30",
+          "status": "Pendente"
+        },
+        {
+          "id": "1768390921808",
+          "titulo": "Comprar leite",
+          "descricao": "v",
+          "data": "2026-01-02",
+          "horario": "08:30",
+          "status": "Concluída"
+        }
+      ]
+    }
+  ]
+}

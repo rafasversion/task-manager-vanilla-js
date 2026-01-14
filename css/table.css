@@ -1,0 +1,82 @@
+.table-tarefas {
+  display: flex;
+  justify-content: center;
+}
+table {
+  width: 56%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--border);
+  margin-bottom: 100px;
+}
+table thead {
+  background: linear-gradient(180deg, #9a8cff, #8374f5);
+  color: white;
+}
+table th,
+table td {
+  padding: 12px 14px;
+  text-align: left;
+}
+table tbody tr {
+  border-bottom: 1px dashed var(--border);
+}
+table tbody tr:last-child {
+  border-bottom: none;
+}
+
+table td:last-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.editar-tarefa,
+.excluir-tarefa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+}
+
+.tarefa-horario {
+  text-align: center;
+}
+.tarefa-status {
+  position: relative;
+  width: 180px;
+  padding-left: 50px;
+}
+.tarefa-status::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  align-self: center;
+  left: 16px;
+  margin-right: 20px;
+  border: 1px solid var(--primary);
+}
+.Concluída::before {
+  background-color: #aeffb2;
+}
+.Pendente::before {
+  background-color: var(--pending);
+}
+.excluir-tarefa {
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  font-size: 18px;
+  padding: 0 16px;
+  box-shadow: var(--shadow-pink);
+  background: linear-gradient(180deg, #f7f5ff, #ffe2f5);
+  line-height: 1;
+}
+
+.tarefa-status.mobile {
+  display: none;
+}

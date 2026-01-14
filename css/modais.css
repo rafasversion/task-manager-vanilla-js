@@ -1,0 +1,405 @@
+.modal {
+  display: none;
+}
+.modal.ativo {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  background: rgba(120, 110, 200, 0.35);
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+.modal-conteudo {
+  width: 420px;
+  background: var(--bg-card);
+  border-radius: 18px;
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.modal-header {
+  height: 40px;
+  background: linear-gradient(180deg, #b7b0ff, #9f96ff);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 8px;
+}
+.fechar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+.modal form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.modal form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.container-button {
+  margin-top: 20px;
+  align-self: self-end;
+}
+.modal-excluir {
+  display: none;
+}
+.modal-excluir.ativo {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  background: rgba(120, 110, 200, 0.35);
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+}
+.modal-excluir .modal-conteudo {
+  width: 380px;
+  background: var(--bg-card);
+  border-radius: 18px;
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.modal-excluir .modal-header {
+  height: 40px;
+  background: linear-gradient(180deg, #ffb3d9, #ff8dc7);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 8px;
+}
+.modal-excluir .modal-body {
+  padding: 24px;
+  text-align: center;
+}
+.modal-excluir h2 {
+  color: var(--secondary);
+  margin-bottom: 12px;
+}
+.modal-excluir p {
+  margin-bottom: 20px;
+}
+.excluir-acoes {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.confirmar-exclusao {
+  border-color: var(--secondary);
+  color: white;
+  background: linear-gradient(180deg, #ff9ccd, #ff78bd);
+}
+.confirmar-exclusao:hover {
+  background: linear-gradient(180deg, #ffb3d9, #ff8dc7);
+}
+.modal-tarefa {
+  display: none;
+}
+.modal-tarefa.ativo {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  background: rgba(120, 110, 200, 0.35);
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+}
+.modal-tarefa.modal-conteudo {
+  width: 380px;
+  background: var(--bg-card);
+  border-radius: 18px;
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.modal-tarefa .modal-header {
+  height: 40px;
+  background: linear-gradient(180deg, #b7b0ff, #9f96ff);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 8px;
+}
+.modal-tarefa .modal-body {
+  padding: 24px;
+  text-align: center;
+}
+.modal-tarefa h2 {
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.nenhuma-tarefa {
+  text-align: center;
+  color: var(--text);
+  font-weight: 600;
+}
+.btn__abrirModal {
+  margin-top: 100px;
+  text-align: center;
+}
+.modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 16px;
+  scrollbar-gutter: stable;
+}
+.modal-tarefa-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #ffffff, #f6f5ff);
+}
+.modal-tarefa-hora {
+  min-width: 70px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--primary);
+  text-align: left;
+}
+.modal-tarefa-info {
+  flex: 1;
+  text-align: left;
+}
+.modal-tarefa-info h4 {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+.modal-tarefa-info p {
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+.modal-status {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.modal-tarefa-item.concluida .modal-status {
+  background: #aeffb2;
+  color: #2f6b3f;
+}
+.modal-tarefa-item.pendente .modal-status {
+  background: var(--secondary);
+  color: #fff;
+}
+.modal-list::-webkit-scrollbar {
+  width: 10px;
+}
+.modal-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.modal-list::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+.modal-list::-webkit-scrollbar-thumb:hover {
+  background: var(--text);
+}
+.modal__login {
+  position: fixed;
+  inset: 0;
+  background: rgba(120, 110, 200, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 30;
+}
+.modal__login.ativo {
+  opacity: 1;
+  pointer-events: all;
+}
+.login__conteudo {
+  width: 840px;
+  min-height: 440px;
+  background: var(--bg-card);
+  border-radius: 22px;
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  overflow: hidden;
+  transform: scale(0.94) translateY(20px);
+  transition: transform 0.4s ease;
+  backdrop-filter: blur(8px);
+}
+.modal__login.ativo .login__conteudo {
+  transform: scale(1) translateY(0);
+}
+.fechar__login {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.login__info {
+  padding: 46px 42px;
+  background: linear-gradient(180deg, #f4f2ff, #ebe8ff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  position: relative;
+}
+.login__info::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.5),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+.login__info h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.login__info p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+.login__beneficios {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+.login__beneficios li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.login__beneficios li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--secondary);
+}
+.login__form {
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+.login__tabs {
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 6px;
+  border-radius: 18px;
+  border: 2px solid var(--border);
+}
+.login__tabs .tab {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: 14px;
+  background: transparent;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+.login__tabs .tab:hover {
+  background: rgba(120, 110, 200, 0.08);
+}
+.login__tabs .tab.ativo {
+  background: var(--secondary);
+  color: white;
+  box-shadow: 0 8px 24px rgba(120, 110, 200, 0.35);
+}
+.form__login {
+  display: none;
+  flex-direction: column;
+  gap: 14px;
+  animation: fadeSlide 0.4s ease;
+}
+.form__login.ativo {
+  display: flex;
+}
+.form__login input {
+  height: 46px;
+  padding: 0 18px;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+    linear-gradient(120deg, #d6d2ff, #ffd6ec) border-box;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.35s ease;
+}
+.form__login input::placeholder {
+  color: #9b98b8;
+  font-weight: 600;
+}
+.form__login input:focus {
+  outline: none;
+  transform: translateY(-1px);
+  background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+    linear-gradient(120deg, var(--primary), var(--secondary)) border-box;
+  box-shadow: 0 12px 30px rgba(120, 110, 200, 0.25);
+}
+.container-button {
+  margin-top: 6px;
+  align-self: flex-end;
+}
+.container-button button {
+  min-width: 150px;
+  padding: 12px 26px;
+  border-radius: 18px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+.container-button button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 8px 18px rgba(120, 110, 200, 0.4);
+}

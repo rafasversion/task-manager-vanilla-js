@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>FlowTask | Perfil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="./img/iconFlowTask.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/129d611424.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class="header container">
+    <nav class="navbar">
+      <a class="navbar__brand" href="./painel.html">FlowTask</a>
+
+      <button class="navbar__toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="navbar__list" id="menuNav">
+        <li class="navbar__item"><a class="navbar__link" href="./index.html">Home</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="./painel.html">Painel</a></li>
+        <li class="navbar__item"><a class="navbar__link navbar__link--login" href="#">Login</a></li>
+        <li class="navbar__item navbar__item--user">
+          <button class="navbar-user__avatar" id="userMenuBtn">
+            <i class="fa-regular fa-user"></i>
+          </button>
+          <div class="navbar-user__dropdown" id="userDropdown">
+            <a class="navbar-user__link" href="./perfil.html">Perfil</a>
+            <button class="navbar-user__logout" id="logoutBtn">Logout</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="container perfil">
+    <div class="perfil-card">
+      <h2>Meu Perfil</h2>
+      <div class="perfil-info">
+        <div class="perfil-avatar">
+          <div class="avatar-circle"> <svg class="perfil-avatar-icon" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" />
+              <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg> </div>
+        </div>
+        <p><strong>Nome:</strong> <span id="perfilNome"></span></p>
+        <p><strong>Email:</strong> <span id="perfilEmail"></span></p>
+      </div>
+      <div class="perfil-acoes"> <button id="editarPerfil">Editar dados</button> <button id="editarSenha">Editar senha</button> <button class="danger" id="excluirPerfil">Excluir conta</button> </div>
+    </div>
+  </section>
+  <div class="modal" id="modalPerfil">
+    <div class="modal-conteudo">
+      <div class="modal-header"> <span class="fechar" id="fecharPerfil">&times;</span> </div>
+      <form>
+        <h2>Editar Perfil</h2> <input type="text" id="editNome" placeholder="Nome"> <input type="email" id="editEmail" placeholder="Email">
+        <div class="container-button"> <button type="button" id="salvarPerfil">Salvar</button> </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal modal-senha" id="modalSenha">
+    <div class="modal-conteudo">
+      <div class="modal-header"> <span class="fechar" id="fecharSenha">&times;</span> </div>
+      <form>
+        <h2>Alterar senha</h2> <input type="password" id="senhaAtual" placeholder="Senha atual"> <input type="password" id="novaSenha" placeholder="Nova senha"> <input type="password" id="confirmarSenha" placeholder="Confirmar nova senha">
+        <div class="container-button"> <button type="button" id="salvarSenha">Salvar</button> </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal modal-feedback">
+    <div class="modal-content">
+      <span class="fechar-feedback">×</span>
+      <p class="feedback-texto"></p>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js" defer></script>
+
+</body>
+
+</html>

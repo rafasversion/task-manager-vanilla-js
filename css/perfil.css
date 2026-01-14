@@ -1,0 +1,89 @@
+.perfil {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.perfil-card {
+  background: #fff7fb;
+  border: 2px solid #c9c2ff;
+  border-radius: 24px;
+  padding: 40px;
+  width: 420px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.perfil-avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.avatar-circle {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b7cff, #ff86c8);
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.perfil-acoes {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.perfil-acoes button {
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #8f7cff, #b9a9ff);
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.perfil-acoes button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.perfil-acoes .danger {
+  background: linear-gradient(135deg, var(--secondary), #ff9a9a);
+}
+
+.perfil-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 240, 250, 0.85)
+  );
+  backdrop-filter: blur(12px);
+  border-radius: 28px;
+  padding: 42px;
+  width: 500px;
+  border: 2px solid rgba(139, 124, 255, 0.3);
+  box-shadow: 0 30px 60px rgba(139, 124, 255, 0.15),
+    inset 0 0 20px rgba(255, 255, 255, 0.6);
+  animation: fadeUp 0.6s ease;
+}
+
+.perfil-avatar-icon {
+  width: 44px;
+  height: 44px;
+  stroke: white;
+}

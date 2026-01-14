@@ -1,0 +1,22 @@
+.progresso-container {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+.progresso-barra {
+  width: 100%;
+  height: 12px;
+  background: #e6e2ff;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progresso-preenchido {
+  height: 100%;
+  background: linear-gradient(90deg, #8b7cf6, #ff8dc7);
+  transition: width 0.4s ease;
+}
+.progresso-texto {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+}

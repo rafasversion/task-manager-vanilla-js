@@ -1,0 +1,31 @@
+.form-filtro {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px 32px 0px;
+}
+.form-filtro form {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  background: rgba(255, 247, 251, 0.75);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.form-filtro button {
+  background: var(--primary);
+  color: var(--bg-main);
+}
+select,
+input {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  background: #fff;
+}
+
+mark {
+  background: var(--secondary);
+  padding: 2px 4px;
+  border-radius: 4px;
+}

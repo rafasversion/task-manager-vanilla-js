@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowTask | Painel</title>
+  <link rel="icon" href="./img/iconFlowTask.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/129d611424.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class="header container">
+    <nav class="navbar">
+      <a class="navbar__brand" href="./painel.html">FlowTask</a>
+
+      <button class="navbar__toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="navbar__list" id="menuNav">
+        <li class="navbar__item"><a class="navbar__link" href="./index.html">Home</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="./painel.html">Painel</a></li>
+        <li class="navbar__item"><a class="navbar__link navbar__link--login" href="#">Login</a></li>
+        <li class="navbar__item navbar__item--user">
+          <button class="navbar-user__avatar" id="userMenuBtn">
+            <i class="fa-regular fa-user"></i>
+          </button>
+          <div class="navbar-user__dropdown" id="userDropdown">
+            <a class="navbar-user__link" href="./perfil.html">Perfil</a>
+            <button class="navbar-user__logout" id="logoutBtn">Logout</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="resumo-tarefas">
+    <div class="contador total"> <span class="contador-label">Total</span> <span class="contador-numero" id="totalTarefas">0</span> </div>
+    <div class="contador pendentes"> <span class="contador-label">Pendentes</span> <span class="contador-numero" id="tarefasPendentes">0</span> </div>
+    <div class="contador concluidas"> <span class="contador-label">Concluídas</span> <span class="contador-numero" id="tarefasConcluidas">0</span> </div>
+  </div>
+  <div class="progresso-container">
+    <div class="progresso-barra">
+      <div class="progresso-preenchido" style="width: 0%"></div>
+    </div> <span class="progresso-texto">0% concluído</span>
+  </div>
+  <section class="calendar container">
+    <div class="calendar__header"> <button id="prev-month">🡸</button>
+      <h2 id="month-year"></h2> <button id="next-month">🡺</button>
+    </div>
+    <div class="calendar__body">
+      <div class="weekdays">
+        <div>Domingo</div>
+        <div>Segunda</div>
+        <div>Terça</div>
+        <div>Quarta</div>
+        <div>Quinta</div>
+        <div>Sexta</div>
+        <div>Sábado</div>
+      </div>
+      <div class="days" id="days"> </div>
+    </div>
+  </section>
+  <div class="btn__abrirModal"> <button id="abrirModal">Adicionar Nova Tarefa</button> </div>
+  <div class="form-filtro">
+    <form> <input type="text" id="buscarTarefa" placeholder="Buscar tarefa"> <select id="status">
+        <option value="Todas">Todas</option>
+        <option value="Concluída">Concluída</option>
+        <option value="Pendente">Pendente</option>
+      </select> <button id="filtrarTarefa" type="button">Filtrar</button> </form>
+  </div>
+  <div class="table-tarefas">
+    <table>
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Descrição</th>
+          <th>Data</th>
+          <th>Horário</th>
+          <th>Status</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  </div>
+  <p class="nenhuma-tarefa" style="display: none;"> Nenhuma tarefa encontrada </p>
+  <div class="modal">
+    <div class="modal-conteudo">
+      <div class="modal-header"> <span class="fechar" id="fecharModalTarefa">&times;</span> </div>
+      <form class="form-tarefa">
+        <h2>Adicionar Tarefa</h2> <label>Título</label> <input type="text" id="titulo"> <label>Descrição</label> <input type="text" id="descricao"> <label>Data</label> <input type="date" id="data"> <label>Horário</label> <input type="text" id="horario"> <label>Status</label> <select id="statusModal">
+          <option value="Pendente">Pendente</option>
+          <option value="Concluída">Concluída</option>
+        </select>
+        <div class="container-button"> <button id="criarTarefa" type="button">Salvar</button> </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-excluir">
+    <div class="modal-conteudo">
+      <div class="modal-header"> <span class="fechar fechar-excluir">&times;</span> </div>
+      <div class="modal-body">
+        <h2>Excluir tarefa</h2>
+        <p>Tem certeza que deseja excluir esta tarefa?</p>
+        <div class="container-button excluir-acoes"> <button class="cancelar-exclusao">Cancelar</button> <button class="confirmar-exclusao">Excluir</button> </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-tarefa">
+    <div class="modal-conteudo">
+      <div class="modal-header"> <span class="fechar" id="fecharModalVisualizacao">&times;</span> </div>
+      <div class="modal-body">
+        <h2>Tarefas</h2>
+        <div class="modal-list"></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal-feedback">
+    <div class="modal-content">
+      <span class="fechar-feedback">×</span>
+      <p class="feedback-texto"></p>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

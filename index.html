@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowTask</title>
+  <link rel="icon" href="./img/iconFlowTask.png" type="image/png">
+  <script type="module" src="./js/main.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/129d611424.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header class="header container">
+    <nav class="navbar">
+      <a class="navbar__brand" href="./painel.html">FlowTask</a>
+
+      <button class="navbar__toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="navbar__list" id="menuNav">
+        <li class="navbar__item"><a class="navbar__link" href="./index.html">Home</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="./painel.html">Painel</a></li>
+        <li class="navbar__item"><a class="navbar__link navbar__link--login" href="#">Login</a></li>
+        <li class="navbar__item navbar__item--user">
+          <button class="navbar-user__avatar" id="userMenuBtn">
+            <i class="fa-regular fa-user"></i>
+          </button>
+          <div class="navbar-user__dropdown" id="userDropdown">
+            <a class="navbar-user__link" href="./perfil.html">Perfil</a>
+            <button class="navbar-user__logout" id="logoutBtn">Logout</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero container">
+    <h1 class="hero__title">Bem-vindo ao FlowTask</h1>
+    <p class="hero__subtitle">Organize suas tarefas de forma simples</p> <button class="hero__button">Começar</button>
+  </section>
+  <section class="features container">
+    <div class="features__card"> <img class="features__card-img" src="./img/calendar.png" alt="">
+      <div class="features__card-info">
+        <h2 class="features__card-title">Calendário</h2>
+        <p class="features__card-text">Visualize suas tarefas no calendário.</p>
+      </div>
+    </div>
+    <div class="features__card">
+      <div class="features__card-info">
+        <h2 class="features__card-title">Status</h2>
+        <p class="features__card-text">Acompanhe o progresso das suas tarefas cadastradas.</p>
+      </div> <img class="features__card-img" src="./img/status.png" alt="">
+    </div>
+    <div class="features__card"> <img class="features__card-img" src="./img/table.png" alt="">
+      <div class="features__card-info">
+        <h2 class="features__card-title">Gerenciamento</h2>
+        <p class="features__card-text">Gerencia suas tarefas cadastradas, editando informações ou status. Exclue quando achar necessário.</p>
+      </div>
+    </div>
+    <div class="features__card">
+      <div class="features__card-info">
+        <h2 class="features__card-title">Filtro</h2>
+        <p class="features__card-text">Você pode filtrar suas tarefas de forma precisa.</p>
+      </div> <img class="features__card-img" src="./img/filtro.png" alt="">
+    </div>
+  </section>
+  <div class="modal__login">
+    <div class="login__conteudo"> <span class="fechar__login">&times;</span>
+      <div class="login__info">
+        <h1>FlowTask</h1>
+        <p>Organize tarefas, acompanhe progresso e mantenha tudo sob controle.</p>
+        <ul class="login__beneficios">
+          <li>Controle por calendário</li>
+          <li>Status das tarefas</li>
+          <li>Progresso visual</li>
+        </ul>
+      </div>
+      <div class="login__form">
+        <div class="login__tabs"> <button class="tab ativo" data-tab="login">Login</button> <button class="tab" data-tab="cadastro">Cadastro</button> </div>
+        <form class="form__login ativo" data-form="login"> <input type="email" id="loginEmail" placeholder="Email"> <input type="password" id="loginSenha" placeholder="Senha">
+          <div class="container-button"> <button type="button" id="btnLogin">Entrar</button> </div>
+        </form>
+        <form class="form__login" data-form="cadastro"> <input type="text" id="nomeCompleto" placeholder="Nome completo"> <input type="email" id="email" placeholder="Email"> <input type="password" id="senha" placeholder="Senha">
+          <div class="container-button"> <button type="button" id="btnRegister">Criar conta</button> </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-feedback">
+    <div class="modal-content">
+      <span class="fechar-feedback">×</span>
+      <p class="feedback-texto"></p>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .features__card-img {
+    width: 380px;
+  }
+
+  .calendar {
+    width: 75%;
+  }
+
+  table {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    justify-content: space-between;
+    z-index: 100;
+  }
+
+  .navbar__toggle {
+    display: block !important;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .navbar__list {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    background: var(--bg-card);
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: 0.25s ease;
+    z-index: 200;
+    isolation: isolate;
+  }
+
+  .navbar__list.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .navbar__item {
+    width: 100%;
+  }
+
+  .navbar__link {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-align: left;
+  }
+
+  .navbar__link--login {
+    text-align: center;
+  }
+
+  .navbar-user__avatar {
+    margin-left: auto;
+  }
+
+  .navbar-user__dropdown {
+    right: 0;
+    left: auto;
+  }
+
+  .hero__title {
+    font-size: 2.2rem;
+  }
+
+  .features__card,
+  .features__card:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .features__card-img {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .resumo-tarefas {
+    flex-wrap: wrap;
+    margin: 40px 20px;
+  }
+
+  .contador {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .progresso-container {
+    max-width: 90%;
+  }
+
+  .progresso-barra {
+    height: 10px;
+  }
+
+  .progresso-texto {
+    font-size: 0.75rem;
+  }
+
+  .calendar {
+    width: 100%;
+    padding: 12px 16px;
+  }
+
+  .calendar__header h2 {
+    font-size: 1.1rem;
+  }
+
+  .weekdays div {
+    font-size: 11px;
+    padding: 4px;
+  }
+
+  .days > div {
+    height: 90px;
+    padding: 4px;
+  }
+
+  .task {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+
+  .form-filtro form {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .table-tarefas {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  table {
+    width: 100%;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    margin: 20px auto;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tbody tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    border-radius: 16px;
+    background: var(--bg-card);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  table tbody tr td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border: none;
+    font-size: 0.85rem;
+  }
+
+  table tbody tr td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: var(--primary);
+    padding-right: 12px;
+  }
+
+  table tbody tr td[data-label="Título"] {
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+    font-size: 0.95rem;
+    background: linear-gradient(180deg, #f7f5ff, #ece9ff);
+  }
+
+  table tbody tr td[data-label="Título"]::before {
+    display: none;
+  }
+
+  .tarefa-status.mobile {
+    display: inline-flex;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .tarefa-status.mobile.Pendente {
+    background: var(--secondary);
+    color: #fff;
+  }
+
+  .tarefa-status.mobile.Concluída {
+    background: #84aa9c;
+    color: #fff;
+  }
+
+  td[data-label="Status"].desktop {
+    display: none;
+  }
+
+  table tbody tr td:last-child {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px 16px 14px;
+  }
+
+  table tbody tr td:last-child::before {
+    display: none;
+  }
+
+  .editar-tarefa,
+  .excluir-tarefa {
+    min-width: 90px;
+    max-width: 110px;
+    padding: 6px 0;
+    font-size: 0.75rem;
+    border-radius: 8px;
+  }
+
+  .login__conteudo {
+    grid-template-columns: 1fr;
+    width: 92%;
+  }
+
+  .login__info {
+    display: none;
+  }
+
+  .perfil-card {
+    width: 100%;
+    padding: 32px 24px;
+  }
+  .tarefa-status::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .navbar__brand {
+    font-size: 1.1rem;
+  }
+
+  .hero__title {
+    font-size: 1.9rem;
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+  }
+
+  .contador {
+    width: 100%;
+  }
+
+  .progresso-container {
+    max-width: 95%;
+  }
+
+  .progresso-barra {
+    height: 8px;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .calendar {
+    padding: 10px;
+  }
+
+  .weekdays div {
+    font-size: 10px;
+  }
+
+  .days > div {
+    height: 70px;
+  }
+
+  .day-number {
+    font-size: 10px;
+  }
+
+  .task {
+    font-size: 9px;
+  }
+
+  table tbody tr td[data-label="Título"] {
+    font-size: 0.9rem;
+  }
+
+  .tarefa-status.mobile {
+    font-size: 0.6rem;
+    padding: 3px 6px;
+  }
+
+  .editar-tarefa,
+  .excluir-tarefa {
+    min-width: 80px;
+    padding: 5px 0;
+    font-size: 0.7rem;
+  }
+
+  .perfil-acoes {
+    flex-direction: column;
+  }
+
+  .perfil-acoes button {
+    width: 100%;
+  }
+}

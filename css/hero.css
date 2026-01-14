@@ -1,0 +1,38 @@
+.hero {
+  margin-top: 120px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.hero__title {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+.hero__button {
+  align-self: center;
+  margin-top: 40px;
+  animation: floatPulse 2.8s ease-in-out infinite;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow-pink);
+  transition: backround 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero__button:hover {
+  background: var(--secondary);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 36px rgba(255, 120, 203, 0.35);
+}

@@ -1,0 +1,78 @@
+.calendar {
+  margin-top: 100px;
+  width: 56%;
+  align-items: center;
+  padding: 16px 28px;
+  background: rgba(255, 247, 251, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+.weekdays,
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.weekdays div {
+  text-align: center;
+  padding: 8px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.days > div {
+  border: 1px solid #e5e5e5;
+  height: 150px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+}
+.day-number {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--primary);
+}
+.task {
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.task.concluida {
+  background-color: #84aa9c;
+  color: #fff;
+  text-decoration: line-through;
+}
+.task.pendente {
+  background-color: var(--secondary);
+  color: #fff;
+}
+.ver-mais {
+  background: rgba(255, 247, 251, 0.75);
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 10px;
+  margin-top: 4px;
+  padding: 0px;
+  height: 20px;
+}
+.today {
+  background: #edeaff;
+  border: 2px solid var(--primary);
+}
