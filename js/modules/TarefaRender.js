@@ -48,7 +48,7 @@ export default class TarefaRender {
         </td>
 
         <td data-label="Descrição">
-          ${this.destacarTexto(tarefa.descricao, termo)}
+          ${this.destacarTexto(tarefa.descricao, termo) || "Sem descrição"}
         </td>
 
         <td data-label="Data">

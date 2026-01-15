@@ -10,6 +10,7 @@ export default class UserComponent {
 
   initElements() {
     this.btnAbrirModal = document.querySelector(".navbar__link--login");
+    this.btnComecar = document.querySelector(".hero__button");
     this.modalLogin = document.querySelector(".modal__login");
     this.btnFecharModal = document.querySelector(".fechar__login");
     this.tabs = document.querySelectorAll(".tab");
@@ -30,6 +31,12 @@ export default class UserComponent {
   bindEvents() {
     if (this.btnAbrirModal)
       this.btnAbrirModal.addEventListener("click", (e) => {
+        e.preventDefault();
+        this.toggleModal();
+      });
+
+    if (this.btnComecar)
+      this.btnComecar.addEventListener("click", (e) => {
         e.preventDefault();
         this.toggleModal();
       });

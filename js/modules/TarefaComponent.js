@@ -28,6 +28,7 @@ export default class TarefaComponent {
 
   initElements() {
     this.btnAbrirModal = document.getElementById("abrirModal");
+    this.btnFecharModal = document.querySelector(".fechar");
     this.btnSalvar = document.getElementById("criarTarefa");
 
     this.modalExcluir = document.querySelector(".modal-excluir");
@@ -57,6 +58,10 @@ export default class TarefaComponent {
       this.tarefaEmEdicao = null;
       this.modal.limpar();
       this.modal.abrir("Adicionar Tarefa");
+    });
+
+    this.btnFecharModal.addEventListener("click", () => {
+      this.modal.fechar();
     });
 
     this.btnSalvar.addEventListener("click", () => {

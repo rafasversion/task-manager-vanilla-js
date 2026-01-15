@@ -95,9 +95,9 @@ export default class CalendarComponent {
     this.modalTarefa.classList.add("ativo");
   }
 
-  fecharModal = () => {
+  fecharModal() {
     this.modalTarefa.classList.remove("ativo");
-  };
+  }
 
   renderizar() {
     this.daysContainer.innerHTML = "";
@@ -124,10 +124,20 @@ export default class CalendarComponent {
 
   renderizarDia(day) {
     const dayDiv = document.createElement("div");
+
     const dayNumber = document.createElement("div");
     dayNumber.className = "day-number";
     dayNumber.textContent = day;
     dayDiv.appendChild(dayNumber);
+
+    const isToday =
+      day === this.today.getDate() &&
+      this.currentMonth === this.today.getMonth() &&
+      this.currentYear === this.today.getFullYear();
+
+    if (isToday) {
+      dayDiv.classList.add("today");
+    }
 
     const dateKey = `${this.currentYear}-${String(
       this.currentMonth + 1
